@@ -15,7 +15,7 @@ stop:
 
 .PHONY: test-run
 test-run:
-	docker exec -it $(APP) php vendor/bin/phpunit ${ARGS}
+	docker exec -it $(APP) php vendor/bin/codecept run --steps ${ARGS}
 
 .PHONY: bash
 bash:

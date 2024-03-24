@@ -18,8 +18,8 @@ class FirstCest
 
     public function frontpageWorks(AcceptanceTester $I)
     {
-        $I->amOnPage('/');
-        $I->see('Sign up');
+        $I->amOnPage('/email-playground/index.html');
+        $I->see('Automate your email');
     }
 
 }
