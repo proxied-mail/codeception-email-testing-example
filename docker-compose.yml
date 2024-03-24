@@ -5,11 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: pxdmail-php-client
-    image: pxdmail-php-client:pxdmail-php-client
-    container_name: pxdmail-php-client
-    hostname: docker-dev-local-om
+      target: pxdmail-codeception-example
+    image: pxdmail-codeception-example:pxdmail-codeception-example
+    container_name: pxdmail-codeception-example
+    hostname: docker-dev-local-om3
     ports:
-      - "1022:80"
+      - "1025:80"
     volumes:
       - .:/app
