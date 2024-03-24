@@ -1,4 +1,4 @@
-APP = pxdmail-php-client
+APP = pxdmail-codeception-example
 ARGS = $(filter-out $@,$(MAKECMDGOALS))
 
 .PHONY: up

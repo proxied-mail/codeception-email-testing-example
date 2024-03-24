@@ -1,5 +1,10 @@
 {
     "require": {
         "proxiedmail/php-client": "^0.3.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^5.1",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "*"
     }
 }
