@@ -10,3 +10,6 @@ actor_suffix: Tester
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+params:
+    - .env
+PROXIEDMAIL_API_TOKEN: "%PROXIEDMAIL_API_TOKEN%"
