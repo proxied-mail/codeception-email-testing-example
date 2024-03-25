@@ -25,6 +25,9 @@ cp .env.dist .env
 ```
 
 And put your ProxiedMail token to .env.
+You can obtain the ProxiedMail token after sign up on [ProxiedMail](https://proxiedmail.com).
+Just go to the "API" link in a header section.
+
 
 Then run composer
 ```bash
