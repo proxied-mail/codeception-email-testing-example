@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: pxdmail-codeception-example
+    image: pxdmail-codeception-example:pxdmail-codeception-example
+    container_name: pxdmail-codeception-example
+    hostname: docker-dev-local-om3
+    ports:
+      - "1025:80"
+    volumes:
+      - .:/app
+    networks:
+      - pxdmail-codeception-example
+
+  selenium-chrome:
+    image: selenium/standalone-chrome
+    shm_size: 2g
+    container_name: selenium-chrome
+    networks:
+      - pxdmail-codeception-example
+
+
+networks:
+    pxdmail-codeception-example:
+        driver: bridge
