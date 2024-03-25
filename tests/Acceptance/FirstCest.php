@@ -31,6 +31,8 @@ class FirstCest
         sleep(3);
 
         $I->canSee('Check your mailbox');
+
+        $api->waitUntilNextEmail($proxyEmail->getId(), 10, 1, 0);
     }
 
 }
