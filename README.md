@@ -3,6 +3,8 @@ Example repository about testing emails with [codeception testing framework](htt
 
 Using [ProxiedMail php library](https://github.com/proxied-mail/proxiedmail-php-client) to perform email receiving and fetching confirmation code.
 
+If you prefer to have some guide to dive into email testing with codeception, feel free to check out [our article on dev.to](https://dev.to/yatsenkolesh/email-testing-with-codeception-4b5g)
+
 ## Test Case
 
 Test case is about requesting confirmation on a first page and validating the confirmation code from email on the second.
