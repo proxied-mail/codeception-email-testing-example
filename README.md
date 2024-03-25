@@ -8,9 +8,9 @@ Using [ProxiedMail php library](https://github.com/proxied-mail/proxiedmail-php-
 Test case is about requesting confirmation on a first page and validating the confirmation code from email on the second.
 We have two pages:
 
-1. Page that requests email confirmation
+1. Page that requests email confirmation (https://proxiedmail.com/email-playground/index.html)
 ![page](./docs/index-page-screen.png)
-2. Page that validating confirmation code
+3. Page that validating confirmation code (https://proxiedmail.com/email-playground/confirmation.html)
    ![page](./docs/confirm-page-screen.png)
 
 ## Code
