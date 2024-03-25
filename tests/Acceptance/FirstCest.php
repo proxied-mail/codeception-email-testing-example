@@ -14,11 +14,6 @@ class FirstCest
     {
     }
 
-    // tests
-    public function tryToTest(AcceptanceTester $I)
-    {
-    }
-
     public function frontpageWorks(
         AcceptanceTester $I
     ) {
@@ -26,12 +21,15 @@ class FirstCest
         $config = new Config();
         $config->setApiToken($proxiedMailApiToken);
         $api = PxdMailApinitializer::init($config);
-        $api->createProxyEmail();
-
+        $proxyEmail = $api->createProxyEmail();
 
 
         $I->amOnPage('/email-playground/index.html');
-        $I->see('Automate your email');
+        $I->fillField(['id' => 'name'], 'Tester');
+        $I->fillField(['id' => 'email'], $proxyEmail->getProxyAddress());
+//        $I->executeJS('document.getElementById("submit").click();');
+
+        $I->canSee('Check your mailbox');
     }
 
 }

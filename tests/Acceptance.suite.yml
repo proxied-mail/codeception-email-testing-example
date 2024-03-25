@@ -6,8 +6,14 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
+        - WebDriver:
             url: http://proxiedmail.com
+            browser: chrome
+            host: 'selenium-chrome'
+            port: 4444
+            capabilities:
+                goog:chromeOptions:
+                    args: [ "--headless" ]
 # Add Codeception\Step\Retry trait to AcceptanceTester to enable retries
 step_decorators:
     - Codeception\Step\ConditionalAssertion

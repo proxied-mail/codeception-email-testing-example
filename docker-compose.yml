@@ -13,3 +13,17 @@ services:
       - "1025:80"
     volumes:
       - .:/app
+    networks:
+      - pxdmail-codeception-example
+
+  selenium-chrome:
+    image: selenium/standalone-chrome
+    shm_size: 2g
+    container_name: selenium-chrome
+    networks:
+      - pxdmail-codeception-example
+
+
+networks:
+    pxdmail-codeception-example:
+        driver: bridge

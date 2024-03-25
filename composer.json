@@ -4,6 +4,7 @@
         "codeception/module-phpbrowser": "*",
         "codeception/module-asserts": "^3.0",
         "symfony/dotenv": "^7.0",
-        "proxiedmail/php-client": "^0.4.0"
+        "proxiedmail/php-client": "^0.4.0",
+        "codeception/module-webdriver": "^4.0"
     }
 }
