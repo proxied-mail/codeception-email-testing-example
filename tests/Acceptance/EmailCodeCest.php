@@ -8,7 +8,7 @@ use Tests\Support\AcceptanceTester;
 use ProxiedMail\Client\Config\Config;
 
 
-class FirstCest
+class EmailCodeCest
 {
     public function _before(AcceptanceTester $I)
     {
