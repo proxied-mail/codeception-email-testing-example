@@ -27,7 +27,8 @@ class FirstCest
         $I->amOnPage('/email-playground/index.html');
         $I->fillField(['id' => 'name'], 'Tester');
         $I->fillField(['id' => 'email'], $proxyEmail->getProxyAddress());
-//        $I->executeJS('document.getElementById("submit").click();');
+        $I->executeJS('document.getElementById("submit").click()');
+        sleep(3);
 
         $I->canSee('Check your mailbox');
     }
