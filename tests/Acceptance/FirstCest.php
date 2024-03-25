@@ -32,7 +32,28 @@ class FirstCest
 
         $I->canSee('Check your mailbox');
 
-        $api->waitUntilNextEmail($proxyEmail->getId(), 10, 1, 0);
+        $firstEmail = $api->waitUntilFirstEmail($proxyEmail->getId());
+
+        $I->assertSame($firstEmail->getSubject(), 'Code confirmation');
+        $text = $firstEmail->getPayload()['stripped-text'];
+        //find code after "Your confirmation code is"
+        preg_match('/Your confirmation code is ([0-9]+)/', $text, $matches);
+        var_dump($text);
+        $code = $matches[1];
+
+        $I->amOnPage('/email-playground/confirmation.html');
+        //testing negative behaviour
+        $I->fillField(['id' => 'confirmation_code'], mt_rand(0000, 9999));
+        $I->executeJS('document.getElementById("submit").click()');
+        sleep(1);
+
+        $I->canSee('Code is invalid');
+
+
+        $I->fillField(['id' => 'confirmation_code'], $code);
+        $I->executeJS('document.getElementById("submit").click()');
+        sleep(3);
+        $I->canSee('Code is valid');
     }
 
 }
